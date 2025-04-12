@@ -1,0 +1,191 @@
+
+<style>
+    .card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  .card-img-container {
+    position: relative;
+  }
+  .card-img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /* Overlay on image for better text visibility */
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,  rgba(46 ,49 ,146,0.3) 50%, rgba(78 ,101 ,255,0.3) 100%);
+    
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  /* Flex container for aligning header and buttons */
+  .overlay-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .overlay-content h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.25rem;
+  }
+  .card-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .stylish-button {
+    background: linear-gradient(to bottom,  rgba(0, 8, 255, 0.6) 50%, rgba(10, 27, 179, 0.5) 100%);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+  }
+  .stylish-button:hover {
+    background: linear-gradient(135deg, #555, #777);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  .items{
+      margin-top: 3rem;
+  }
+  /* Responsive adjustments */
+ 
+</style>
+
+
+
+
+<main class="main">
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Top Projects</h2>
+     </div><!-- End Section Title -->
+
+  <div class="container">
+    
+      <!-- Isotope Container -->
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- Example Portfolio Item with Overlay -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="Branding 3">
+              <div class="overlay">
+                <div class="overlay-content w-100">
+                  <h5>Branding 3</h5>
+                  <div class="card-buttons">
+                    <button class="stylish-button">About</button>
+                    <button class="stylish-button"><i class="bi bi-github"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="Branding 3">
+              <div class="overlay">
+                <div class="overlay-content w-100">
+                  <h5>Branding 3</h5>
+                  <div class="card-buttons">
+                    <button class="stylish-button">About</button>
+                    <button class="stylish-button"><i class="bi bi-github"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="Branding 3">
+              <div class="overlay">
+                <div class="overlay-content w-100">
+                  <h5>Branding 3</h5>
+                  <div class="card-buttons">
+                    <button class="stylish-button">About</button>
+                    <button class="stylish-button"><i class="bi bi-github"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="Branding 3">
+              <div class="overlay">
+                <div class="overlay-content w-100">
+                  <h5>Branding 3</h5>
+                  <div class="card-buttons">
+                    <button class="stylish-button">About</button>
+                    <button class="stylish-button"><i class="bi bi-github"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="Branding 3">
+              <div class="overlay">
+                <div class="overlay-content w-100">
+                  <h5>Branding 3333</h5>
+                  <div class="card-buttons">
+                   <a class="details-link" href="portfolio-details.html"> <button class="stylish-button">About</button></a>
+                    <button class="stylish-button"><i class="bi bi-github"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Additional portfolio items can be added here in the same structure -->
+        <!--
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          ... (Your markup for another portfolio item)
+        </div>
+        -->
+      </div><!-- End Isotope Container -->
+    
+  </div>
+</section><!-- /Portfolio Section -->
+</main>

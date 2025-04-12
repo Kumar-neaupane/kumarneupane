@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Kumar</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Skills</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+         
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100077754874916" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/kumar-neupane/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Kumar-neaupane"><i class="bi bi-github"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    
+      <style>
+        /* Global styles */
+
+        
+        .container {
+          max-width: 1000px !important;
+          margin: 40px auto !important;
+          background: #fff !important;
+          justify-content: center !important;
+          border-radius: 8px !important;
+          overflow: hidden;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
+          display: flex !important;
+         
+         
+        }
+
+        .left, .right {
+          padding: 30px;
+          width: 100%;
+        }
+        @media(min-width: 768px) {
+          .left, .right {
+            width: 50%;
+          }
+        }
+    
+        @media(max-width: 768px) {
+           .container{
+         display: block !important;
+         justify-content: center !important;
+               
+            }
+          
+          .left{
+            justify-content: center !important;
+          }
+          .right{
+            justify-content: center !important;
+          }
+          
+
+        }
+        /* Contact form styles */
+        .contact-form form {
+          display: flex;
+          flex-direction: column;
+          
+        }
+        .contact-form label {
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+        }
+        .contact-form button {
+          background-color: #5cb85c;
+          color: white;
+          padding: 12px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+          background-color: #4cae4c;
+        }
+        /* Contact info section */
+        .contact-info {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+        .contact-info h2 {
+          margin-top: 0;
+        }
+        .contact-info a {
+          color: #5cb85c;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        .contact-info a:hover {
+          text-decoration: underline;
+        }
+        .contact-info ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        .contact-info ul li {
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+        }
+        .contact-info ul li i {
+          margin-right: 10px;
+          font-size: 1.2rem;
+        }
+        /* Responsive adjustments */
+        @media(max-width: 480px) {
+          .container {
+            padding: 10px;
+            flex-wrap: wrap;
+          }
+          .left, .right {
+            padding: 20px;
+          }
+        }
+      </style>
+  
+      <div class="container">
+    
+      
+        <div class="right contact-info">
+            <h2>Get In Touch</h2>
+            <p>You can also connect with me on the following platforms or contact me directly:</p>
+            <ul>
+              <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank">LinkedIn</a></li>
+              <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank">Facebook</a></li>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Kumar-neaupane" target="_blank">GitHub</a></li>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:your.email@example.com"></a>kumarneupane712@gmail.com</li>
+              <li><i class="fa-solid fa-phone"></i> +977 9860059411</li>
+            </ul>
+            <p>I look forward to connecting with you. Feel free to reach out with any questions or opportunities!</p>
+          </div>
+    
+    
+        <!-- Contact Form Section -->
+        <div class="left contact-form">
+          <h2>Contact Form</h2>
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="from_name" placeholder="Your Name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="reply_to" placeholder="your.email@example.com" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Contact Info Section -->
+       
+      </div>
+      
+      <!-- Include EmailJS SDK -->
+      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+      <script type="text/javascript">
+        // Initialize EmailJS with your user ID from the EmailJS dashboard
+        (function(){
+          emailjs.init("-pzTGwzmvntXo4Pw5"); // Replace with your EmailJS user ID
+        })();
+    
+        // Listen for the form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          // Replace 'service_addxjmf' and 'template_78k7a6m' with the IDs from your EmailJS account.
+          emailjs.sendForm('service_addxjmf', 'template_78k7a6m', this)
+            .then(function(response) {
+              alert('Email sent successfully!');
+              console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+              alert('Failed to send email. Please try again.');
+              console.error('FAILED...', error);
+            });
+        });
+      </script>
+   
+    
+  </main>
+
+
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

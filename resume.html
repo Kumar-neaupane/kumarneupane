@@ -1,156 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <title>Resume — Kumar Neupane</title>
+  <meta name="description" content="Kumar Neupane — MERN Stack Web Developer portfolio.">
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stAbout Me
+Passionate developer turning ideas into elegant digital experiences.
+
+ylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/portfolio-custom.css" rel="stylesheet">
+  <!-- Theme init (before first paint) -->
+  <script src="assets/js/theme-toggle.js"></script>
 </head>
-
 <body class="resume-page">
-
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+  <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Kumar</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" >About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="services.html">Skills</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
-         
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="resume.html" class="active">Resume</a></li><li><a href="services.html">Skills</a></li><li><a href="portfolio.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul>
       </nav>
+      <button class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"></button>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100077754874916" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/kumar-neupane/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Kumar-neaupane"><i class="bi bi-github"></i></a>
+      <div class="d-flex align-items-center gap-1 ms-3">
+        <div class="header-social-links d-none d-sm-flex">
+          <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill icon-sun"></i>
+          <i class="bi bi-moon-fill icon-moon"></i>
+        </button>
       </div>
 
     </div>
   </header>
-  <style>
-    .btn-get-started {
-      display: inline-block; /* Allows setting width and height */
-      padding: 10px 20px; /* Adjust padding as needed */
-      text-decoration: none; /* Remove underline */
-      color: #ffffff; /* Initial text color */
-      background-color: #15db51; /* Initial background color */
-      border-radius: 25px; /* Creates rounded corners */
-      border: 0px solid #e1e0e0; /* Optional border */
-      font-weight: bold; /* Make text bold */
-      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
-    }
-  
-    .btn-get-started:hover {
-      background-color: #007bff; /* White background on hover */
-      color: white; /* Text color on hover */
-      border-color: #007bff; /* Optional: change border color on hover */
-    }
-  </style>
-  
+
   <main class="main">
-
-    <!-- Resume Section -->
     <section id="resume" class="resume section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <a href="assets/kumarneupaneCV_.pdf" download class="btn-get-started">Download Resume</a>
-
-         
-      </div><!-- End Section Title -->
-
-     
-
-    </section><!-- /Resume Section -->
-
+        <p>My educational background and professional journey.</p>
+      </div>
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <a href="assets/kumarneupaneCV_.pdf" download class="btn-download-cv"><i class="bi bi-download me-2"></i> Download CV</a>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Computer Application (BCA)</h4><h5>2021 — Present</h5>
+              <p><em>Madan Bhandari Memorial College, Kathmandu, Nepal</em></p>
+              <p>Currently in 7th Semester. Focus on MERN stack, database design, and software engineering fundamentals.</p>
+            </div>
+            <div class="resume-item">
+              <h4>+2 Science (Computer Science)</h4><h5>2018 — 2020</h5>
+              <p><em>Higher Secondary School, Nepal</em></p>
+              <p>Studied Mathematics, Physics and Computer Science. Built foundational programming skills in C and Java.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Experience &amp; Projects</h3>
+            <div class="resume-item">
+              <h4>Freelance Web Developer</h4><h5>2022 — Present</h5>
+              <p><em>Remote, Nepal</em></p>
+              <ul>
+                <li>Built full-stack MERN applications for clients including e-commerce and booking platforms.</li>
+                <li>Designed and deployed WordPress websites for local businesses.</li>
+                <li>Implemented REST APIs with Node.js and Express, integrated MongoDB.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Academic Projects</h4><h5>2021 — Present</h5>
+              <p><em>Madan Bhandari Memorial College</em></p>
+              <ul>
+                <li>YatraSewa — Travel booking platform (MERN Stack).</li>
+                <li>NepaliMart — E-Commerce platform with admin panel (MERN Stack).</li>
+                <li>Book Catalog — Library management system (PHP, MySQL).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer light-background">
-    <style>html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    main.main {
-      flex: 1;
-    }
-    </style>
-
+  <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">KumarNeupane</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100077754874916"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ=="><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/kumar-neupane/"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Kumar-neaupane"><i class="bi bi-github"></i></a>
-      </div>
-    
-    </div>
 
+      <div class="footer-inner">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="footer-logo">Kumar</span>
+          <p>MERN Stack Web Developer based in Lalitpur, Nepal. Passionate about building modern, user-friendly web applications.</p>
+          <div class="footer-social-row">
+            <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li>
+            <li><a href="resume.html"><i class="bi bi-chevron-right"></i>Resume</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i>Skills</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i>Projects</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:kumarneupane712@gmail.com"><i class="bi bi-envelope-fill"></i>kumarneupane712@gmail.com</a></li>
+            <li><a href="tel:+9779860059411"><i class="bi bi-telephone-fill"></i>+977 9860059411</a></li>
+            <li><a href="#"><i class="bi bi-geo-alt-fill"></i>Lalitpur, Nepal</a></li>
+            <li><a href="assets/kumarneupaneCV_.pdf" download><i class="bi bi-download"></i>Download CV</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright mb-0">
+          © 2025 <strong class="sitename">Kumar Neupane</strong> — All Rights Reserved
+        </p>
+        <p class="copyright mb-0" style="font-size:12px;color:#334155;">
+          Built with <span style="color:#ef4444;">&#10084;</span> using HTML, CSS &amp; JavaScript
+        </p>
+      </div>
+
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -158,10 +165,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

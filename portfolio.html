@@ -1,377 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <title>Projects — Kumar Neupane</title>
+  <meta name="description" content="Kumar Neupane — MERN Stack Web Developer portfolio.">
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Custom CSS for Overlay and Card -->
-  <style>
-    /* Card overlay styles */
-    .card {
-      border: none;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #fff;
-    }
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-    .card-img-container {
-      position: relative;
-    }
-    .card-img-container img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    /* Overlay on image */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    /* Flex container for aligning header and buttons */
-    .overlay-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .overlay-content h5 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: bold;
-      margin: 0;
-      color: #fff;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-      font-size: 1.25rem;
-    }
-    .card-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .stylish-button {
-      background: linear-gradient(135deg, #333, #555);
-      color: white;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      font-size: 0.9em;
-    }
-    .stylish-button:hover {
-      background: linear-gradient(135deg, #555, #777);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transform: translateY(-2px);
-    }
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .overlay {
-        padding: 15px;
-      }
-      .overlay-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .card-buttons {
-        margin-top: 10px;
-      }
-    }
-  </style>
-
-
-
-<style>
-      .card {
-      border: none;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-    .card-img-container {
-      position: relative;
-    }
-    .card-img-container img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    /* Overlay on image for better text visibility */
-
- 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom,  rgba(46 ,49 ,146,0.3) 50%, rgba(78 ,101 ,255,0.3) 100%);
-      
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    /* Flex container for aligning header and buttons */
-    .overlay-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .overlay-content h5 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: bold;
-      margin: 0;
-      color: #fff;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-      font-size: 1.25rem;
-    }
-    .card-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .stylish-button {
-      background: linear-gradient(to bottom,  rgba(0, 8, 255, 0.6) 50%, rgba(10, 27, 179, 0.5) 100%);
-      background: linear-gradient(135deg, #1B8B00, #01ff01);
-      color: white;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      font-size: 0.9em;
-    }
-    .stylish-button:hover {
-      background: linear-gradient(135deg, #555, #777);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transform: translateY(-2px);
-    }
-    .items{
-        margin-top: 3rem;
-    }
-    /* Responsive adjustments */
-   
-  </style>
-
+  <link href="assets/css/portfolio-custom.css" rel="stylesheet">
+  <!-- Theme init (before first paint) -->
+  <script src="assets/js/theme-toggle.js"></script>
 </head>
-
 <body class="portfolio-page">
-
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+  <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <h1 class="sitename">Kumar</h1>
       </a>
+
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" >About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Skills</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
-         
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="resume.html">Resume</a></li><li><a href="services.html">Skills</a></li><li><a href="portfolio.html" class="active">Projects</a></li><li><a href="contact.html">Contact</a></li></ul>
       </nav>
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100077754874916" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/kumar-neupane/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Kumar-neaupane"><i class="bi bi-github"></i></a>
+      <button class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"></button>
+
+      <div class="d-flex align-items-center gap-1 ms-3">
+        <div class="header-social-links d-none d-sm-flex">
+          <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill icon-sun"></i>
+          <i class="bi bi-moon-fill icon-moon"></i>
+        </button>
       </div>
+
     </div>
   </header>
 
   <main class="main">
-    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Projects</h2>
-        
-      </div><!-- End Section Title -->
-
+        <p>A showcase of my work — real-world applications built with modern stacks.</p>
+      </div>
       <div class="container">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-         
-           
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <!-- Isotope Container -->
+            <li data-filter=".filter-branding">Web Apps</li>
+          </ul>
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <!-- Example Portfolio Item with Overlay -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="card">
-                <div class="card-img-container">
-                  <img src="assets/img/masonry-portfolio/yatrassewa1.png" class="img-fluid" alt="Branding 3">
-                  <div class="overlay">
-                    <div class="overlay-content w-100">
-                      <h5>YatraSewa</h5>
-                      <div class="card-buttons">
-                        <a class="details-link" href="portfolio-details.html#yatrasewa"> <button class="stylish-button">About</button></a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="card">
-                <div class="card-img-container">
-                  <img src="assets/img/masonry-portfolio/ecommerce1.png" class="img-fluid" alt="Branding 3">
-                  <div class="overlay">
-                    <div class="overlay-content w-100">
-                      <h5>NepaliMart</h5>
-                      <div class="card-buttons">
-                        <a class="details-link" href="portfolio-details.html#nepalimart"> <button class="stylish-button">About</button></a>
-                       
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="portfolio-card-new">
+                <div class="card-img-wrap"><img src="assets/img/masonry-portfolio/yatrassewa1.png" alt="YatraSewa" loading="lazy"><div class="card-overlay"><a href="portfolio-details.html#yatrasewa" class="btn-card btn-card-primary"><i class="bi bi-arrow-right-circle"></i>Details</a></div></div>
+                <div class="card-body-new"><h5 class="card-title-new">YatraSewa</h5><p class="card-tech"><i class="bi bi-braces me-1"></i>React JS · Node.js · MongoDB</p><p class="card-desc">A travel booking platform for Nepal with real-time route search and booking management.</p><div class="card-actions"><a href="portfolio-details.html#yatrasewa" class="btn-card btn-card-primary"><i class="bi bi-eye me-1"></i>Details</a><a href="#" class="btn-card btn-card-outline"><i class="bi bi-github me-1"></i>GitHub</a></div></div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="card">
-                <div class="card-img-container">
-                  <img src="assets/img/masonry-portfolio/admin1.png" class="img-fluid" alt="Branding 3">
-                  <div class="overlay">
-                    <div class="overlay-content w-100">
-                      <h5>AdminDashboard</h5>
-                      <div class="card-buttons">
-                        <a class="details-link" href="portfolio-details.html#admindash"> <button class="stylish-button">About</button></a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="portfolio-card-new">
+                <div class="card-img-wrap"><img src="assets/img/masonry-portfolio/ecommerce1.png" alt="NepaliMart" loading="lazy"><div class="card-overlay"><a href="portfolio-details.html#nepalimart" class="btn-card btn-card-primary"><i class="bi bi-arrow-right-circle"></i>Details</a></div></div>
+                <div class="card-body-new"><h5 class="card-title-new">NepaliMart</h5><p class="card-tech"><i class="bi bi-braces me-1"></i>React JS · Node.js · MongoDB</p><p class="card-desc">Full-featured e-commerce platform with cart, payment integration, and admin dashboard.</p><div class="card-actions"><a href="portfolio-details.html#nepalimart" class="btn-card btn-card-primary"><i class="bi bi-eye me-1"></i>Details</a><a href="#" class="btn-card btn-card-outline"><i class="bi bi-github me-1"></i>GitHub</a></div></div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="card">
-                <div class="card-img-container">
-                  <img src="assets/img/masonry-portfolio/bookcatalog1.png" class="img-fluid" alt="Branding 3">
-                  <div class="overlay">
-                    <div class="overlay-content w-100">
-                      <h5>BookCatalog</h5>
-                      <div class="card-buttons">
-                        <a class="details-link" href="portfolio-details.html#bookcatalog"> <button class="stylish-button">About</button></a>
-                       
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="portfolio-card-new">
+                <div class="card-img-wrap"><img src="assets/img/masonry-portfolio/admin1.png" alt="Admin Dashboard" loading="lazy"><div class="card-overlay"><a href="portfolio-details.html#admindash" class="btn-card btn-card-primary"><i class="bi bi-arrow-right-circle"></i>Details</a></div></div>
+                <div class="card-body-new"><h5 class="card-title-new">Admin Dashboard</h5><p class="card-tech"><i class="bi bi-braces me-1"></i>React JS · Node.js · MongoDB</p><p class="card-desc">Analytics dashboard with charts, user management, and real-time data visualization.</p><div class="card-actions"><a href="portfolio-details.html#admindash" class="btn-card btn-card-primary"><i class="bi bi-eye me-1"></i>Details</a><a href="#" class="btn-card btn-card-outline"><i class="bi bi-github me-1"></i>GitHub</a></div></div>
               </div>
             </div>
 
-         <!-----  <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="card">
-                <div class="card-img-container">
-                  <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="Branding 3">
-                  <div class="overlay">
-                    <div class="overlay-content w-100">
-                      <h5>WeatherApps</h5>
-                      <div class="card-buttons">
-                       <a class="details-link" href="portfolio-details.html#weatherapp"> <button class="stylish-button">About</button></a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-card-new">
+                <div class="card-img-wrap"><img src="assets/img/masonry-portfolio/bookcatalog1.png" alt="Book Catalog" loading="lazy"><div class="card-overlay"><a href="portfolio-details.html#bookcatalog" class="btn-card btn-card-primary"><i class="bi bi-arrow-right-circle"></i>Details</a></div></div>
+                <div class="card-body-new"><h5 class="card-title-new">Book Catalog</h5><p class="card-tech"><i class="bi bi-braces me-1"></i>HTML · CSS · PHP · MySQL</p><p class="card-desc">Library management system with book search, add, update and delete functionality.</p><div class="card-actions"><a href="portfolio-details.html#bookcatalog" class="btn-card btn-card-primary"><i class="bi bi-eye me-1"></i>Details</a><a href="#" class="btn-card btn-card-outline"><i class="bi bi-github me-1"></i>GitHub</a></div></div>
               </div>
-            </div>------>
-            <!-- Additional portfolio items can be added here in the same structure -->
-            <!--
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              ... (Your markup for another portfolio item)
             </div>
-            -->
-          </div><!-- End Isotope Container -->
+
+          </div>
         </div>
       </div>
-    </section><!-- /Portfolio Section -->
+    </section>
   </main>
 
-  <footer id="footer" class="footer light-background">
-
+  <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">KumarNeupane</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100077754874916"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ=="><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/kumar-neupane/"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Kumar-neaupane"><i class="bi bi-github"></i></a>
-      </div>
-    
-    </div>
 
+      <div class="footer-inner">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="footer-logo">Kumar</span>
+          <p>MERN Stack Web Developer based in Lalitpur, Nepal. Passionate about building modern, user-friendly web applications.</p>
+          <div class="footer-social-row">
+            <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li>
+            <li><a href="resume.html"><i class="bi bi-chevron-right"></i>Resume</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i>Skills</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i>Projects</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:kumarneupane712@gmail.com"><i class="bi bi-envelope-fill"></i>kumarneupane712@gmail.com</a></li>
+            <li><a href="tel:+9779860059411"><i class="bi bi-telephone-fill"></i>+977 9860059411</a></li>
+            <li><a href="#"><i class="bi bi-geo-alt-fill"></i>Lalitpur, Nepal</a></li>
+            <li><a href="assets/kumarneupaneCV_.pdf" download><i class="bi bi-download"></i>Download CV</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright mb-0">
+          © 2025 <strong class="sitename">Kumar Neupane</strong> — All Rights Reserved
+        </p>
+        <p class="copyright mb-0" style="font-size:12px;color:#334155;">
+          Built with <span style="color:#ef4444;">&#10084;</span> using HTML, CSS &amp; JavaScript
+        </p>
+      </div>
+
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -379,9 +160,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>

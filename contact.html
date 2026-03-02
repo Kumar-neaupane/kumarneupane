@@ -1,281 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <title>Contact — Kumar Neupane</title>
+  <meta name="description" content="Kumar Neupane — MERN Stack Web Developer portfolio.">
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-
+  <link href="assets/css/portfolio-custom.css" rel="stylesheet">
+  <!-- Theme init (before first paint) -->
+  <script src="assets/js/theme-toggle.js"></script>
 </head>
-
 <body class="contact-page">
-
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+  <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Kumar</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" >About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Skills</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
-         
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="resume.html">Resume</a></li><li><a href="services.html">Skills</a></li><li><a href="portfolio.html">Projects</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
       </nav>
+      <button class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"></button>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100077754874916" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/kumar-neupane/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Kumar-neaupane"><i class="bi bi-github"></i></a>
+      <div class="d-flex align-items-center gap-1 ms-3">
+        <div class="header-social-links d-none d-sm-flex">
+          <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill icon-sun"></i>
+          <i class="bi bi-moon-fill icon-moon"></i>
+        </button>
       </div>
 
     </div>
   </header>
 
   <main class="main">
-
-    
-      <style>
-        /* Global styles */
-
-        
-        .container {
-          max-width: 1000px !important;
-          margin: 40px auto !important;
-          background: #fff !important;
-          justify-content: center !important;
-          border-radius: 8px !important;
-          overflow: hidden;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
-          display: flex !important;
-         
-         
-        }
-
-        .left, .right {
-          padding: 30px;
-          width: 100%;
-        }
-        @media(min-width: 768px) {
-          .left, .right {
-            width: 50%;
-          }
-        }
-    
-        @media(max-width: 768px) {
-           .container{
-         display: block !important;
-         justify-content: center !important;
-               
-            }
-          
-          .left{
-            justify-content: center !important;
-          }
-          .right{
-            justify-content: center !important;
-          }
-          
-
-        }
-        /* Contact form styles */
-        .contact-form form {
-          display: flex;
-          flex-direction: column;
-          
-        }
-        .contact-form label {
-          margin-bottom: 5px;
-          font-weight: bold;
-        }
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 15px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          font-size: 1rem;
-        }
-        .contact-form button {
-          background-color: #5cb85c;
-          color: white;
-          padding: 12px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 1rem;
-          transition: background-color 0.3s;
-        }
-        .contact-form button:hover {
-          background-color: #4cae4c;
-        }
-        /* Contact info section */
-        .contact-info {
-          font-size: 1rem;
-          line-height: 1.5;
-        }
-        .contact-info h2 {
-          margin-top: 0;
-        }
-        .contact-info a {
-          color: #5cb85c;
-          text-decoration: none;
-          font-weight: bold;
-        }
-        .contact-info a:hover {
-          text-decoration: underline;
-        }
-        .contact-info ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        .contact-info ul li {
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-        }
-        .contact-info ul li i {
-          margin-right: 10px;
-          font-size: 1.2rem;
-        }
-        /* Responsive adjustments */
-        @media(max-width: 480px) {
-          .container {
-            padding: 10px;
-            flex-wrap: wrap;
-          }
-          .left, .right {
-            padding: 20px;
-          }
-        }
-      </style>
-  
-      <div class="container">
-    
-      
-        <div class="right contact-info">
-            <h2>Get In Touch</h2>
-            <p>You can also connect with me on the following platforms or contact me directly:</p>
-            <ul>
-              <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank">LinkedIn</a></li>
-              <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank">Facebook</a></li>
-              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Kumar-neaupane" target="_blank">GitHub</a></li>
-              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:your.email@example.com"></a>kumarneupane712@gmail.com</li>
-              <li><i class="fa-solid fa-phone"></i> +977 9860059411</li>
-            </ul>
-            <p>I look forward to connecting with you. Feel free to reach out with any questions or opportunities!</p>
-          </div>
-    
-    
-        <!-- Contact Form Section -->
-        <div class="left contact-form">
-          <h2>Contact Form</h2>
-          <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="from_name" placeholder="Your Name" required>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="reply_to" placeholder="your.email@example.com" required>
-            
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-        
-        <!-- Contact Info Section -->
-       
+    <section id="contact" class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
       </div>
-      
-      <!-- Include EmailJS SDK -->
-      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-      <script type="text/javascript">
-        // Initialize EmailJS with your user ID from the EmailJS dashboard
-        (function(){
-          emailjs.init("-pzTGwzmvntXo4Pw5"); // Replace with your EmailJS user ID
-        })();
-    
-        // Listen for the form submission
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-    
-          // Replace 'service_addxjmf' and 'template_78k7a6m' with the IDs from your EmailJS account.
-          emailjs.sendForm('service_addxjmf', 'template_78k7a6m', this)
-            .then(function(response) {
-              alert('Email sent successfully!');
-              console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-              alert('Failed to send email. Please try again.');
-              console.error('FAILED...', error);
-            });
-        });
-      </script>
-   
-    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+              <h3>Let's Connect</h3>
+              <p>I'm open to freelance opportunities and full-time positions. Feel free to reach out through any channel below.</p>
+              <ul class="contact-info-list">
+                <li onclick="window.location='mailto:kumarneupane712@gmail.com'" style="cursor:pointer">
+                  <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+                  <div><span>Email</span><strong>kumarneupane712@gmail.com</strong></div>
+                </li>
+                <li onclick="window.location='tel:+9779860059411'" style="cursor:pointer">
+                  <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
+                  <div><span>Phone</span><strong>+977 9860059411</strong></div>
+                </li>
+                <li onclick="window.open('https://www.linkedin.com/in/kumar-neupane/')" style="cursor:pointer">
+                  <div class="ci-icon"><i class="bi bi-linkedin"></i></div>
+                  <div><span>LinkedIn</span><strong>linkedin.com/in/kumar-neupane</strong></div>
+                </li>
+                <li onclick="window.open('https://github.com/Kumar-neaupane')" style="cursor:pointer">
+                  <div class="ci-icon"><i class="bi bi-github"></i></div>
+                  <div><span>GitHub</span><strong>github.com/Kumar-neaupane</strong></div>
+                </li>
+                <li>
+                  <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div><span>Location</span><strong>Lalitpur, Nepal</strong></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form-card">
+              <h3>Send A Message</h3>
+              <form id="contact-form">
+                <div class="form-group-custom"><label for="name">Your Name</label><input type="text" id="name" name="from_name" placeholder="John Doe" required></div>
+                <div class="form-group-custom"><label for="email">Email Address</label><input type="email" id="email" name="reply_to" placeholder="john@example.com" required></div>
+                <div class="form-group-custom"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Project Inquiry" required></div>
+                <div class="form-group-custom"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea></div>
+                <button type="submit" class="btn-submit"><i class="bi bi-send-fill me-2"></i> Send Message</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer id="footer" class="footer">
+    <div class="container">
 
+      <div class="footer-inner">
 
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="footer-logo">Kumar</span>
+          <p>MERN Stack Web Developer based in Lalitpur, Nepal. Passionate about building modern, user-friendly web applications.</p>
+          <div class="footer-social-row">
+            <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
 
-  <!-- Scroll Top -->
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li>
+            <li><a href="resume.html"><i class="bi bi-chevron-right"></i>Resume</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i>Skills</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i>Projects</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:kumarneupane712@gmail.com"><i class="bi bi-envelope-fill"></i>kumarneupane712@gmail.com</a></li>
+            <li><a href="tel:+9779860059411"><i class="bi bi-telephone-fill"></i>+977 9860059411</a></li>
+            <li><a href="#"><i class="bi bi-geo-alt-fill"></i>Lalitpur, Nepal</a></li>
+            <li><a href="assets/kumarneupaneCV_.pdf" download><i class="bi bi-download"></i>Download CV</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright mb-0">
+          © 2025 <strong class="sitename">Kumar Neupane</strong> — All Rights Reserved
+        </p>
+        <p class="copyright mb-0" style="font-size:12px;color:#334155;">
+          Built with <span style="color:#ef4444;">&#10084;</span> using HTML, CSS &amp; JavaScript
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script>
+    (function(){ emailjs.init("-pzTGwzmvntXo4Pw5"); })();
+    document.getElementById("contact-form").addEventListener("submit",function(e){
+      e.preventDefault();
+      var btn = this.querySelector("button[type=submit]");
+      btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i> Sending...';
+      btn.disabled = true;
+      emailjs.sendForm("service_addxjmf","template_78k7a6m",this)
+        .then(function(){
+          btn.innerHTML = '<i class="bi bi-check-circle me-2"></i> Sent Successfully!';
+          btn.style.background = "linear-gradient(135deg,#059652,#057a3f)";
+          setTimeout(function(){ btn.innerHTML='<i class="bi bi-send-fill me-2"></i> Send Message'; btn.style.background=""; btn.disabled=false; },4000);
+        },function(){
+          btn.innerHTML='<i class="bi bi-x-circle me-2"></i> Failed — Try Again';
+          btn.style.background="linear-gradient(135deg,#ef4444,#b91c1c)";
+          setTimeout(function(){ btn.innerHTML='<i class="bi bi-send-fill me-2"></i> Send Message'; btn.style.background=""; btn.disabled=false; },4000);
+        });
+    });
+  </script>
 </body>
-
 </html>

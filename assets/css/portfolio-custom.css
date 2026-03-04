@@ -263,6 +263,53 @@ a:hover { color: var(--accent-pale); }
 }
 
 /* ============================================================
+   MOBILE TEXT SPACING
+   ============================================================ */
+@media (max-width: 767px) {
+  .hero .container,
+  .section .container,
+  section .container {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  /* Hero inner col also gets breathing room */
+  .hero .row > [class*="col"] {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  .hero h2 {
+    padding-left: 2px;
+  }
+
+  .hero-badge {
+    margin-left: 2px;
+  }
+
+  .hero-actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-outline {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-stats {
+    gap: 18px !important;
+  }
+
+  .hero-desc,
+  .section-title p {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+/* ============================================================
    MOBILE NAVIGATION — Stylish slide-in drawer with glassmorphism
    Works together with JS that toggles body.mobile-nav-active
    ============================================================ */

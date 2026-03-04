@@ -1,187 +1,462 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Kumar Neupane — MERN Stack Web Developer</title>
-  <meta name="description" content="Kumar Neupane — MERN Stack Web Developer based in Lalitpur, Nepal.">
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/portfolio-custom.css" rel="stylesheet">
-  <!-- Theme init (before first paint) -->
-  <script src="assets/js/theme-toggle.js"></script>
-</head>
-<body class="index-page">
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kumar Neupane — MERN Stack Web Developer</title>
+    <meta
+      name="description"
+      content="Kumar Neupane — MERN Stack Web Developer based in Lalitpur, Nepal."
+    />
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/portfolio-custom.css" rel="stylesheet" />
+    <!-- Theme init (before first paint) -->
+    <script src="assets/js/theme-toggle.js"></script>
+  </head>
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">Kumar</h1>
+        </a>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Kumar</h1>
-      </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Skills</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button
+          class="mobile-nav-toggle d-xl-none bi bi-list"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navmenu"
+        ></button>
 
-      <nav id="navmenu" class="navmenu">
-        <ul><li><a href="index.html" class="active">Home</a></li><li><a href="about.html">About</a></li><li><a href="resume.html">Resume</a></li><li><a href="services.html">Skills</a></li><li><a href="portfolio.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </nav>
-      <button class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"></button>
-
-      <div class="d-flex align-items-center gap-1 ms-3">
-        <div class="header-social-links d-none d-sm-flex">
-          <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <div class="d-flex align-items-center gap-1 ms-3">
+          <div class="header-social-links d-none d-sm-flex">
+            <a
+              href="https://www.facebook.com/profile.php?id=100077754874916"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/kumar-neupane/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/Kumar-neaupane"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="bi bi-github"></i
+            ></a>
+          </div>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="bi bi-sun-fill icon-sun"></i>
+            <i class="bi bi-moon-fill icon-moon"></i>
+          </button>
         </div>
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <i class="bi bi-sun-fill icon-sun"></i>
-          <i class="bi bi-moon-fill icon-moon"></i>
-        </button>
       </div>
+    </header>
 
-    </div>
-  </header>
+    <main class="main">
+      <section id="hero" class="hero section">
+        <img
+          src="assets/img/profile.jpeg"
+          alt="Kumar Neupane"
+          class="hero-bg-image"
+          fetchpriority="high"
+        />
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-particles">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span><span></span><span></span>
+        </div>
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7" data-aos="fade-right" data-aos-duration="900">
+              <div class="hero-badge">Available For Work</div>
+              <h2>Kumar Neupane</h2>
+              <span class="hero-typewriter"><span id="typed-text"></span></span>
+              <p class="hero-desc">
+                MERN Stack Web Developer focused on building scalable,
+                responsive, user-focused web applications. Currently pursuing a
+                Bachelor in Computer Application (7th Semester) at Madan
+                Bhandari Memorial College.
+              </p>
+              <div class="hero-actions">
+                <a href="portfolio.html" class="btn-hero-primary"
+                  ><i class="bi bi-grid-3x3-gap"></i> View Projects</a
+                >
+                <a href="contact.html" class="btn-hero-outline"
+                  ><i class="bi bi-envelope"></i> Hire Me</a
+                >
+              </div>
+              <div class="hero-stats">
+                <div class="hero-stat-item">
+                  <span class="hero-stat-number">10+</span
+                  ><span class="hero-stat-label">Projects</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="hero-stat-number">2024</span
+                  ><span class="hero-stat-label">Internship Start</span>
+                </div>
+                <div class="hero-stat-item">
+                  <span class="hero-stat-number">8th</span
+                  ><span class="hero-stat-label">Semester BCA</span>
+                </div>
+              </div>
+            </div>
 
-  <main class="main">
+            <div
+              class="col-lg-5 d-none d-lg-flex justify-content-center"
+              data-aos="fade-left"
+              data-aos-duration="900"
+              data-aos-delay="200"
+            >
+              <div
+                class="hero-img-card"
+                style="max-width: 340px; width: 100%; position: relative"
+              >
+                <img
+                  src="assets/img/profile.jpeg"
+                  alt="Kumar Neupane"
+                  loading="lazy"
+                />
+                <div class="about-img-badge">
+                  <i class="bi bi-code-slash me-1"></i> Full-Stack Developer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="hero" class="hero section">
-      <img src="assets/img/profile.jpeg" alt="Kumar Neupane" class="hero-bg-image" fetchpriority="high">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-particles"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <section id="featured-projects" class="testimonials section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Featured Projects</h2>
+          <p>
+            A selection of projects built with the MERN stack, React, and PHP.
+          </p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 700,
+                "autoplay": { "delay": 4500, "disableOnInteraction": false },
+                "breakpoints": {
+                  "0": { "slidesPerView": 1, "spaceBetween": 20 },
+                  "640": { "slidesPerView": 2, "spaceBetween": 24 },
+                  "1024": { "slidesPerView": 3, "spaceBetween": 28 }
+                },
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-auto">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/masonry-portfolio/yatrassewa1.png"
+                    alt="JobHub"
+                  />
+                  <h3>JobHub</h3>
+                  <h4>
+                    <i class="bi bi-braces me-1"></i>MongoDB · Express · React ·
+                    Node
+                  </h4>
+                  <div class="stars">
+                    <a href="portfolio-details.html#jobhub"
+                      ><i class="bi bi-eye me-1"></i>View Details</a
+                    ><a href="#" class="ms-2" aria-label="View JobHub live demo"
+                      ><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/masonry-portfolio/ecommerce1.png"
+                    alt="Task Management System"
+                  />
+                  <h3>Task Management System</h3>
+                  <h4>
+                    <i class="bi bi-braces me-1"></i>React · TypeScript ·
+                    Context API
+                  </h4>
+                  <div class="stars">
+                    <a href="portfolio-details.html#taskmanager"
+                      ><i class="bi bi-eye me-1"></i>View Details</a
+                    ><a
+                      href="#"
+                      class="ms-2"
+                      aria-label="View Task Management System live demo"
+                      ><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/masonry-portfolio/admin1.png"
+                    alt="Lead Management System"
+                  />
+                  <h3>Lead Management System</h3>
+                  <h4>
+                    <i class="bi bi-braces me-1"></i>MongoDB · Express · React ·
+                    Node
+                  </h4>
+                  <div class="stars">
+                    <a href="portfolio-details.html#leadmanager"
+                      ><i class="bi bi-eye me-1"></i>View Details</a
+                    ><a
+                      href="#"
+                      class="ms-2"
+                      aria-label="View Lead Management System live demo"
+                      ><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/masonry-portfolio/bookcatalog1.png"
+                    alt="A&M Moving Services"
+                  />
+                  <h3>A&amp;M Moving Services</h3>
+                  <h4>
+                    <i class="bi bi-braces me-1"></i>React · Responsive UI
+                  </h4>
+                  <div class="stars">
+                    <a href="portfolio-details.html#movingservices"
+                      ><i class="bi bi-eye me-1"></i>View Details</a
+                    ><a
+                      href="#"
+                      class="ms-2"
+                      aria-label="View A and M Moving Services live demo"
+                      ><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="text-center mt-5" data-aos="fade-up">
+            <a href="portfolio.html" class="btn-hero-outline"
+              ><i class="bi bi-grid me-2"></i>See All Projects</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
       <div class="container">
-        <div class="row align-items-center g-5">
-
-          <div class="col-lg-7" data-aos="fade-right" data-aos-duration="900">
-            <div class="hero-badge">Available For Work </div>
-            <h2>Kumar Neupane</h2>
-            <span class="hero-typewriter"><span id="typed-text"></span></span>
-            <p class="hero-desc">MERN Stack Web Developer focused on building scalable, responsive, user-focused web applications. Currently pursuing a Bachelor in Computer Application (7th Semester) at Madan Bhandari Memorial College.</p>
-            <div class="hero-actions">
-              <a href="portfolio.html" class="btn-hero-primary"><i class="bi bi-grid-3x3-gap"></i> View Projects</a>
-              <a href="contact.html" class="btn-hero-outline"><i class="bi bi-envelope"></i> Hire Me</a>
+        <div class="footer-inner">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <span class="footer-logo">Kumar</span>
+            <p>
+              MERN Stack Web Developer based in Lalitpur, Nepal. Passionate
+              about building modern, user-friendly web applications.
+            </p>
+            <div class="footer-social-row">
+              <a
+                href="https://www.facebook.com/profile.php?id=100077754874916"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/kumar-neupane/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/Kumar-neaupane"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><i class="bi bi-github"></i
+              ></a>
             </div>
-            <div class="hero-stats">
-              <div class="hero-stat-item"><span class="hero-stat-number">10+</span><span class="hero-stat-label">Projects</span></div>
-              <div class="hero-stat-item"><span class="hero-stat-number">2024</span><span class="hero-stat-label">Internship Start</span></div>
-              <div class="hero-stat-item"><span class="hero-stat-number">8th</span><span class="hero-stat-label">Semester BCA</span></div>
-            </div>
           </div>
 
-          <div class="col-lg-5 d-none d-lg-flex justify-content-center" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
-            <div class="hero-img-card" style="max-width:340px;width:100%;position:relative;">
-              <img src="assets/img/profile.jpeg" alt="Kumar Neupane" loading="lazy">
-              <div class="about-img-badge"><i class="bi bi-code-slash me-1"></i> Full-Stack Developer</div>
-            </div>
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li>
+                <a href="index.html"><i class="bi bi-chevron-right"></i>Home</a>
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="bi bi-chevron-right"></i>About</a
+                >
+              </li>
+              <li>
+                <a href="resume.html"
+                  ><i class="bi bi-chevron-right"></i>Resume</a
+                >
+              </li>
+              <li>
+                <a href="services.html"
+                  ><i class="bi bi-chevron-right"></i>Skills</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html"
+                  ><i class="bi bi-chevron-right"></i>Projects</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="bi bi-chevron-right"></i>Contact</a
+                >
+              </li>
+            </ul>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <section id="featured-projects" class="testimonials section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Projects</h2>
-        <p>A selection of projects built with the MERN stack, React, and PHP.</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">{"loop":true,"speed":700,"autoplay":{"delay":4500,"disableOnInteraction":false},"breakpoints":{"0":{"slidesPerView":1,"spaceBetween":20},"640":{"slidesPerView":2,"spaceBetween":24},"1024":{"slidesPerView":3,"spaceBetween":28}},"pagination":{"el":".swiper-pagination","type":"bullets","clickable":true}}</script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide h-auto"><div class="testimonial-item"><img src="assets/img/masonry-portfolio/yatrassewa1.png" alt="JobHub"><h3>JobHub</h3><h4><i class="bi bi-braces me-1"></i>MongoDB · Express · React · Node</h4><div class="stars"><a href="portfolio-details.html#jobhub"><i class="bi bi-eye me-1"></i>View Details</a><a href="#" class="ms-2" aria-label="View JobHub live demo"><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a></div></div></div>
-            <div class="swiper-slide h-auto"><div class="testimonial-item"><img src="assets/img/masonry-portfolio/ecommerce1.png" alt="Task Management System"><h3>Task Management System</h3><h4><i class="bi bi-braces me-1"></i>React · TypeScript · Context API</h4><div class="stars"><a href="portfolio-details.html#taskmanager"><i class="bi bi-eye me-1"></i>View Details</a><a href="#" class="ms-2" aria-label="View Task Management System live demo"><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a></div></div></div>
-            <div class="swiper-slide h-auto"><div class="testimonial-item"><img src="assets/img/masonry-portfolio/admin1.png" alt="Lead Management System"><h3>Lead Management System</h3><h4><i class="bi bi-braces me-1"></i>MongoDB · Express · React · Node</h4><div class="stars"><a href="portfolio-details.html#leadmanager"><i class="bi bi-eye me-1"></i>View Details</a><a href="#" class="ms-2" aria-label="View Lead Management System live demo"><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a></div></div></div>
-            <div class="swiper-slide h-auto"><div class="testimonial-item"><img src="assets/img/masonry-portfolio/bookcatalog1.png" alt="A&M Moving Services"><h3>A&amp;M Moving Services</h3><h4><i class="bi bi-braces me-1"></i>React · Responsive UI</h4><div class="stars"><a href="portfolio-details.html#movingservices"><i class="bi bi-eye me-1"></i>View Details</a><a href="#" class="ms-2" aria-label="View A and M Moving Services live demo"><i class="bi bi-box-arrow-up-right me-1"></i>View Live</a></div></div></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="text-center mt-5" data-aos="fade-up">
-          <a href="portfolio.html" class="btn-hero-outline"><i class="bi bi-grid me-2"></i>See All Projects</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="container">
-
-      <div class="footer-inner">
-
-        <!-- Brand -->
-        <div class="footer-brand">
-          <span class="footer-logo">Kumar</span>
-          <p>MERN Stack Web Developer based in Lalitpur, Nepal. Passionate about building modern, user-friendly web applications.</p>
-          <div class="footer-social-row">
-            <a href="https://www.facebook.com/profile.php?id=100077754874916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/kumar__neupane?igsh=MW40NDB0ZDhyMHNrMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/kumar-neupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/Kumar-neaupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <!-- Contact Info -->
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul>
+              <li>
+                <a href="mailto:kumarneupane712@gmail.com"
+                  ><i class="bi bi-envelope-fill"></i
+                  >kumarneupane712@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+9779818041863"
+                  ><i class="bi bi-telephone-fill"></i>+977 9818041863</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="bi bi-geo-alt-fill"></i>Lalitpur, Nepal</a
+                >
+              </li>
+              <li>
+                <a href="assets/kumarneupaneCV_.pdf" download
+                  ><i class="bi bi-download"></i>Download CV</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h5>Quick Links</h5>
-          <ul>
-            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
-            <li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li>
-            <li><a href="resume.html"><i class="bi bi-chevron-right"></i>Resume</a></li>
-            <li><a href="services.html"><i class="bi bi-chevron-right"></i>Skills</a></li>
-            <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i>Projects</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="footer-col">
-          <h5>Contact</h5>
-          <ul>
-            <li><a href="mailto:kumarneupane712@gmail.com"><i class="bi bi-envelope-fill"></i>kumarneupane712@gmail.com</a></li>
-            <li><a href="tel:+9779818041863"><i class="bi bi-telephone-fill"></i>+977 9818041863</a></li>
-            <li><a href="#"><i class="bi bi-geo-alt-fill"></i>Lalitpur, Nepal</a></li>
-            <li><a href="assets/kumarneupaneCV_.pdf" download><i class="bi bi-download"></i>Download CV</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p class="copyright mb-0">
-          © 2026 <strong class="sitename">Kumar Neupane</strong> — All Rights Reserved
-        </p>
-        <!-- <p class="copyright mb-0" style="font-size:12px;color:#334155;">
+        <div class="footer-bottom">
+          <p class="copyright mb-0">
+            © 2026 <strong class="sitename">Kumar Neupane</strong> — All Rights
+            Reserved
+          </p>
+          <!-- <p class="copyright mb-0" style="font-size:12px;color:#334155;">
           Built with <span style="color:#ef4444;">&#10084;</span> using HTML, CSS &amp; JavaScript
         </p> -->
+        </div>
       </div>
+    </footer>
 
-    </div>
-  </footer>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded",function(){
-      new Typed("#typed-text",{
-        strings:["MERN Stack Web Developer","React.js + TypeScript","Node.js Backend Development","REST API Builder","Freelance Available"],
-        typeSpeed:55,backSpeed:30,backDelay:1800,loop:true,smartBackspace:true
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Typed("#typed-text", {
+          strings: [
+            "MERN Stack Web Developer",
+            "React.js + TypeScript",
+            "Node.js Backend Development",
+            "REST API Builder",
+            "Freelance Available",
+          ],
+          typeSpeed: 55,
+          backSpeed: 30,
+          backDelay: 1800,
+          loop: true,
+          smartBackspace: true,
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

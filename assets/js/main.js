@@ -84,7 +84,8 @@
   /* Close when clicking outside (on the dark backdrop) */
   document.addEventListener('click', (e) => {
     if (!body.classList.contains('mobile-nav-active')) return;
-    const clickedInsideNav    = navMenu    && navMenu.contains(e.target);
+    const menuList = navMenu && navMenu.querySelector(':scope > ul');
+    const clickedInsideNav    = menuList && menuList.contains(e.target);
     const clickedOnToggle     = navToggleBtn && navToggleBtn.contains(e.target);
     if (!clickedInsideNav && !clickedOnToggle) closeMobileNav();
   });

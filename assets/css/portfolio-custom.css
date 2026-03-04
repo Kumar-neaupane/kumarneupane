@@ -59,7 +59,7 @@
   --header-bg:     rgba(248,250,252,0.97);
   --nav-bg-mobile: #ffffff;
   --nav-overlay:   rgba(15,23,42,0.6);
-  --footer-bg:     #1e293b;
+  --footer-bg:     #f8fafc;
   --progress-track:rgba(0,0,0,0.07);
   --input-bg:      #f8fafc;
   --input-border:  #cbd5e1;
@@ -210,16 +210,69 @@ a:hover { color: var(--accent-pale); }
 [data-theme="light"] #theme-toggle .icon-moon { display: none; }
 
 /* ============================================================
-   MOBILE NAVIGATION — custom full-screen overlay + centered card
+   HEADER LAYOUT — Mobile polish (hamburger left, theme right)
+   Fixes template flex order causing icons before logo
+   ============================================================ */
+@media (max-width: 1199px) {
+  .header .container-fluid {
+    /* More breathing room on mobile/tablet */
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    gap: 10px;
+  }
+
+  /* Ensure predictable order inside header flex */
+  .header .mobile-nav-toggle {
+    order: 1 !important;
+    margin-left: 2px;
+  }
+
+  .header .logo {
+    order: 2 !important;
+    margin-right: auto !important;
+  }
+
+  .header #navmenu {
+    order: 3 !important;
+  }
+
+  /* Right-side controls (theme toggle) */
+  .header .d-flex.align-items-center.gap-1.ms-3 {
+    order: 4 !important;
+    margin-left: auto !important; /* override bootstrap ms-3 */
+    margin-right: 2px;
+  }
+
+  #theme-toggle {
+    margin-left: 0 !important;
+  }
+
+  /* When the mobile menu is open, the close (X) sits top-right.
+     Hide the theme toggle so they don't overlap. */
+  body.mobile-nav-active #theme-toggle {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .header .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* ============================================================
+   MOBILE NAVIGATION — Stylish slide-in drawer with glassmorphism
    Works together with JS that toggles body.mobile-nav-active
    ============================================================ */
 
-/* Base hamburger appearance */
+/* ── Hamburger button — hidden on desktop, shown on mobile ── */
 .mobile-nav-toggle {
-  display: none;
+  display: none; /* shown via media query below */
   background: transparent;
-  border: 1px solid rgba(109, 40, 217, 0.4);
-  border-radius: 999px;
+  border: 1.5px solid rgba(109, 40, 217, 0.45);
+  border-radius: 12px;
   color: var(--text-primary) !important;
   font-size: 22px;
   cursor: pointer;
@@ -232,13 +285,16 @@ a:hover { color: var(--accent-pale); }
   padding: 0;
   line-height: 0;
   font-family: inherit;
-  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+  position: relative;
+  z-index: 100;
 }
 
 .mobile-nav-toggle:hover {
-  background: rgba(109, 40, 217, 0.12);
+  background: rgba(109, 40, 217, 0.14);
   border-color: var(--accent);
   color: var(--accent-light) !important;
+  transform: scale(1.08);
 }
 
 .mobile-nav-toggle:focus-visible {
@@ -246,115 +302,239 @@ a:hover { color: var(--accent-pale); }
   outline-offset: 2px;
 }
 
+/* ── Show hamburger on tablet/mobile ── */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     display: inline-flex !important;
   }
 
-  /* Reset any template mobile styles so we fully control it */
+  /* Keep desktop navmenu hidden; drawer is controlled by body class */
   .navmenu {
     padding: 0 !important;
   }
 
-  .navmenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none; /* hidden by default on mobile */
-    position: static !important;
-    inset: auto !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: transparent !important;
-  }
-
-  /* Dark blurred backdrop */
-  body.mobile-nav-active {
-    overflow: hidden;
-  }
-
-  body.mobile-nav-active::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(10, 15, 34, 0.9);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 9997;
-  }
-
-  /* Container that holds the centered white card */
-  body.mobile-nav-active #navmenu {
-    position: fixed !important;
-    inset: 0 !important;
-    z-index: 9998 !important;
-    display: flex !important;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 72px;
-  }
-
-  /* Centered card with nav items */
-  body.mobile-nav-active #navmenu > ul {
-    display: flex !important;
-    flex-direction: column;
-    width: min(420px, 92vw);
-    max-height: calc(100vh - 110px);
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 6px 0;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
-    overflow-y: auto;
-  }
-
-  body.mobile-nav-active #navmenu a,
-  body.mobile-nav-active #navmenu a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 14px 22px;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: "Poppins", system-ui, sans-serif;
-    color: #111827 !important;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-    text-decoration: none !important;
-    white-space: nowrap;
-    min-height: 48px;
-  }
-
-  body.mobile-nav-active #navmenu li:last-child > a {
-    border-bottom: none;
-  }
-
-  body.mobile-nav-active #navmenu a:hover,
-  body.mobile-nav-active #navmenu .active,
-  body.mobile-nav-active #navmenu .active:focus {
-    background: rgba(79, 70, 229, 0.06);
-    color: var(--accent) !important;
-    padding-left: 28px;
-  }
-
-  /* When open, turn hamburger into a floating circular X button */
-  body.mobile-nav-active .mobile-nav-toggle {
-    position: fixed;
-    top: 18px;
-    right: 18px;
-    z-index: 10001;
-    background: rgba(109, 40, 217, 0.9);
-    color: #ffffff !important;
-    border-color: transparent;
-    border-radius: 999px;
-    transform: none;
+  .navmenu > ul {
+    display: none !important; /* hidden unless mobile-nav-active */
   }
 }
 
-@media (max-width: 480px) {
-  .header-social-links { display: none !important; }
+/* ── BACKDROP — blurred dark overlay behind drawer ── */
+body.mobile-nav-active {
+  overflow: hidden !important;
 }
 
-/* Small screen: hide social links in header, show in nav */
+body.mobile-nav-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 22, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  animation: fadeInBackdrop 0.3s ease forwards;
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Header creates a stacking context (z-index: 997 in main.css).
+   Lift it above the backdrop so the drawer isn't blurred/hidden. */
+@media (max-width: 1199px) {
+  body.mobile-nav-active #header {
+    z-index: 10005 !important;
+  }
+}
+
+/* ── DRAWER CONTAINER ── */
+body.mobile-nav-active #navmenu {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  width: min(340px, 88vw) !important;
+  height: 100vh !important;
+  z-index: 10004 !important;
+  display: flex !important;
+  flex-direction: column;
+  background: linear-gradient(160deg, rgba(22, 12, 46, 0.98) 0%, rgba(15, 23, 42, 0.99) 100%) !important;
+  border-left: 1px solid rgba(109, 40, 217, 0.25);
+  box-shadow: -20px 0 70px rgba(0, 0, 0, 0.6);
+  padding: 0 !important;
+  overflow: hidden;
+  animation: slideInDrawer 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+[data-theme="light"] body.mobile-nav-active #navmenu {
+  background: linear-gradient(160deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.99) 100%) !important;
+  border-left: 1px solid rgba(109, 40, 217, 0.18);
+}
+
+@keyframes slideInDrawer {
+  from { transform: translateX(100%); opacity: 0.6; }
+  to   { transform: translateX(0);   opacity: 1;   }
+}
+
+/* ── Drawer header strip ── */
+body.mobile-nav-active #navmenu::before {
+  content: "Menu";
+  display: flex;
+  align-items: center;
+  padding: 22px 28px 16px;
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-pale, #a78bfa);
+  border-bottom: 1px solid rgba(109, 40, 217, 0.2);
+  background: rgba(109, 40, 217, 0.06);
+}
+
+/* ── Drawer nav list ── */
+body.mobile-nav-active #navmenu > ul {
+  display: flex !important;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 !important;
+  overflow-y: auto;
+  flex: 1;
+  position: static !important;
+  inset: auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  max-height: none !important;
+}
+
+/* Stagger animation for each nav item */
+body.mobile-nav-active #navmenu > ul > li {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: navItemSlide 0.35s ease forwards;
+}
+body.mobile-nav-active #navmenu > ul > li:nth-child(1) { animation-delay: 0.08s; }
+body.mobile-nav-active #navmenu > ul > li:nth-child(2) { animation-delay: 0.13s; }
+body.mobile-nav-active #navmenu > ul > li:nth-child(3) { animation-delay: 0.18s; }
+body.mobile-nav-active #navmenu > ul > li:nth-child(4) { animation-delay: 0.23s; }
+body.mobile-nav-active #navmenu > ul > li:nth-child(5) { animation-delay: 0.28s; }
+body.mobile-nav-active #navmenu > ul > li:nth-child(6) { animation-delay: 0.33s; }
+body.mobile-nav-active #navmenu > ul > li:nth-child(7) { animation-delay: 0.38s; }
+
+@keyframes navItemSlide {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Drawer nav links ── */
+body.mobile-nav-active #navmenu a,
+body.mobile-nav-active #navmenu a:focus {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 14px;
+  padding: 15px 28px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  font-family: "Poppins", system-ui, sans-serif !important;
+  color: rgba(226, 232, 240, 0.9) !important;
+  border-bottom: 1px solid rgba(109, 40, 217, 0.1) !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  min-height: 52px;
+  transition: background 0.2s, color 0.2s, padding-left 0.2s !important;
+  position: relative;
+}
+
+[data-theme="light"] body.mobile-nav-active #navmenu a,
+[data-theme="light"] body.mobile-nav-active #navmenu a:focus {
+  color: #1e293b !important;
+  border-bottom-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Left accent bar on hover */
+body.mobile-nav-active #navmenu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient, linear-gradient(135deg,#6d28d9,#0ea5e9));
+  border-radius: 0 3px 3px 0;
+  transform: scaleY(0);
+  transition: transform 0.2s;
+}
+
+body.mobile-nav-active #navmenu li:last-child > a {
+  border-bottom: none !important;
+}
+
+/* Icon per nav item (decorative emoji/icon prefix) */
+body.mobile-nav-active #navmenu a::after {
+  content: "→";
+  margin-left: auto;
+  font-size: 12px;
+  opacity: 0.35;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+body.mobile-nav-active #navmenu a:hover::after,
+body.mobile-nav-active #navmenu .active::after {
+  opacity: 0.85;
+  transform: translateX(4px);
+}
+
+body.mobile-nav-active #navmenu a:hover,
+body.mobile-nav-active #navmenu .active,
+body.mobile-nav-active #navmenu .active:focus {
+  background: rgba(109, 40, 217, 0.1) !important;
+  color: var(--accent-pale, #a78bfa) !important;
+  padding-left: 34px !important;
+}
+
+body.mobile-nav-active #navmenu a:hover::before,
+body.mobile-nav-active #navmenu .active::before {
+  transform: scaleY(1);
+}
+
+[data-theme="light"] body.mobile-nav-active #navmenu a:hover {
+  background: rgba(109, 40, 217, 0.07) !important;
+  color: #6d28d9 !important;
+}
+
+/* ── Close (×) button becomes fixed corner pill ── */
+body.mobile-nav-active .mobile-nav-toggle {
+  position: fixed !important;
+  top: 16px !important;
+  right: 16px !important;
+  z-index: 10006 !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: linear-gradient(135deg, #7c3aed, #0ea5e9) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(109, 40, 217, 0.5) !important;
+  transform: rotate(0deg) scale(1);
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+body.mobile-nav-active .mobile-nav-toggle:hover {
+  transform: rotate(90deg) scale(1.08) !important;
+  box-shadow: 0 8px 28px rgba(109, 40, 217, 0.7) !important;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7) rotate(-90deg); opacity: 0; }
+  to   { transform: scale(1)   rotate(0deg);   opacity: 1; }
+}
+
+/* ── Responsive: hide social links on very small screens ── */
 @media (max-width: 480px) {
   .header-social-links { display: none !important; }
 }
@@ -983,9 +1163,31 @@ section:nth-child(even),
 .footer-bottom .copyright a { color: #64748b; text-decoration: none; }
 .footer-bottom .copyright a:hover { color: var(--accent-pale); }
 
-/* Light-mode footer adjustments */
-[data-theme="light"] .footer { background: #1e293b !important; }
-[data-theme="light"] .footer-col h5 { color: #f1f5f9 !important; }
+/* Light-mode footer adjustments (make footer truly light) */
+[data-theme="light"] .footer {
+  background: var(--footer-bg) !important;
+  border-top-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+[data-theme="light"] .footer-inner {
+  border-bottom-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+[data-theme="light"] .footer-col h5 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .footer-brand p,
+[data-theme="light"] .footer-col ul li a,
+[data-theme="light"] .footer-bottom .copyright,
+[data-theme="light"] .footer-bottom .copyright a {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="light"] .footer-social-row a {
+  border-color: rgba(15, 23, 42, 0.14) !important;
+  color: var(--text-muted) !important;
+}
 
 /* ============================================================
    PRELOADER
@@ -1005,8 +1207,8 @@ section:nth-child(even),
 
 /* ============================================================
    RESPONSIVE UTILITIES
-   ============================================================ */
-@media (max-width: 992px) {
+   /* ============================================================ */
+/* @media (max-width: 992px) {
   .hero-stats { gap: 20px; }
   section, .section { padding: 60px 0 !important; }
 }
@@ -1026,8 +1228,8 @@ section:nth-child(even),
   .hero-stats { gap: 14px; }
   .hero-stat-number { font-size: 20px; }
   .form-group-custom input,
-  .form-group-custom textarea { font-size: 16px !important; } /* prevent zoom on iOS */
-}
+  .form-group-custom textarea }{ font-size: 16px !important; } /* prevent zoom on iOS */
+*/ */
 
 /* ============================================================
    TYPED CURSOR
@@ -1078,14 +1280,14 @@ body {
 }
 
 /* ── 4. Decorative Orbs — scale down on small screens ── */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero-orb-1 { width: 280px !important; height: 280px !important; top: -60px !important; right: -60px !important; }
   .hero-orb-2 { width: 200px !important; height: 200px !important; }
 }
 @media (max-width: 480px) {
   .hero-orb-1 { width: 200px !important; height: 200px !important; opacity: 0.6; }
   .hero-orb-2 { width: 140px !important; height: 140px !important; opacity: 0.5; }
-}
+} */
 
 /* ── 5. Section Padding — use clamp ── */
 section,
@@ -1094,38 +1296,9 @@ section,
 }
 
 /* ── 6. Mobile Nav Toggle — styled as proper button ── */
-.mobile-nav-toggle {
-  display: none;
-  background: transparent;
-  border: 1px solid rgba(109, 40, 217, 0.3);
-  border-radius: 8px;
-  color: var(--text-primary) !important;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10000;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  min-height: 44px;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-  padding: 0;
-  line-height: 0;
-  font-family: inherit;
-}
-.mobile-nav-toggle i { line-height: 0; pointer-events: none; }
-.mobile-nav-toggle:focus-visible {
-  outline: 2px solid var(--accent-light);
-  outline-offset: 2px;
-}
-
-@media (max-width: 1199px) {
-  .mobile-nav-toggle { display: flex !important; }
-}
 
 /* ── 7. All Interactive Elements — minimum tap target ── */
-.navmenu a,
+/* .navmenu a,
 .header-social-links a,
 #theme-toggle,
 .btn-hero-primary,
@@ -1145,7 +1318,7 @@ section,
 }
 
 /* ── 8. Hero Actions — full-width buttons on small mobile ── */
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .hero-actions {
     flex-direction: column !important;
     align-items: stretch !important;
@@ -1170,7 +1343,7 @@ section,
   }
 }
 
-/* ── 10. Hero stats — wrap gracefully at 360px ── */
+/* ── 10. Hero stats — wrap gracefully at 380px ── */
 @media (max-width: 380px) {
   .hero-stats {
     gap: 12px !important;
@@ -1257,14 +1430,7 @@ img {
   .hero-badge { font-size: 10px !important; padding: 5px 12px !important; }
 }
 
-/* ── 20. Mobile nav backdrop — ensure it covers full viewport ── */
-.mobile-nav-active::after {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 9997 !important;
-}
-
-/* ── 21. Keyboard focus styles for accessibility ── */
+/* ── 20. Keyboard focus styles for accessibility ── */
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--accent-light);

@@ -702,8 +702,7 @@ section:nth-child(even),
 }
 .hero-badge::before {
   content: ""; width: 8px; height: 8px;
-  background: #22c55e; border-radius: 50%;
-  animation: blink 2s infinite;
+  
 }
 @keyframes blink {
   0%,100% { opacity:1; }
